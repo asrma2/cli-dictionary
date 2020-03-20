@@ -1,0 +1,12 @@
+{
+  "name": "cli-dictionary",
+  "version": "1.0.0",
+  "description": "A fun cli tool to learn new words.",
+  "main": "dict.js",
+  "bin": "./dict.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Akash Sharma",
+  "license": "ISC"
+}
