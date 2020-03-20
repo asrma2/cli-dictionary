@@ -1,0 +1,1 @@
+console.log('This file will contain all the functions to fetch the data.');
