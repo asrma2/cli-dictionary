@@ -153,13 +153,13 @@ module.exports = {
                     console.warn('Oops! Something went wrong!!!\n Error :', body);
                 }
             })
-            .then(function(word) {
+            .then( async function(word) {
                 if (word) {
                     console.log("\n Word of the Day: " + word);
-                    module.exports.getDefinition(word);
-                    module.exports.getExample(word);
-                    module.exports.getSynonym(word);
-                    module.exports.getAntonym(word);
+                    await module.exports.getDefinition(word);
+                    await module.exports.getExample(word);
+                    await module.exports.getSynonym(word);
+                    await module.exports.getAntonym(word);
                 } else {
                     console.warn('Oops! Something went wrong!!!\n Error :', body);
                 }
