@@ -1,6 +1,6 @@
 const api = require('../apis/api');
 
-function generalFeatures(func, word) {
+async function generalFeatures(func, word) {
     switch (func) {
         case "defn":
             {
@@ -44,13 +44,25 @@ function generalFeatures(func, word) {
             }
         case "randomWord":
             {
-                //TODO
+                console.log('Your word of the day...');
+                api.getRandomWord();
+                break;
+            }
+        case "full":
+            {
+                var result = await api.getDefinition(word);
+                if(result == 'OK') {
+                    await api.getExample(word);
+                    await api.getSynonym(word);
+                    await api.getAntonym(word);
+                }
                 break;
             }
         default:
             {
-                //TODO
-            }
+                console.log('No such command...');
+                break;
+            }    
     }
 }
 
