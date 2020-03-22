@@ -3,31 +3,31 @@ A command line dictionary tool using 42 Words API. Provides the following comman
 Use 'node dict.js' instead of './dict.js' when runnig on windows
 
 ## Word Definitions
-./dict.js defn 'word'
+- `./dict.js defn 'word'`<br/>
 Display definitions of a given word.
 
 ## Word Synonyms
-./dict.js syn 'word'
+- `./dict.js syn 'word'`<br/>
 Display definitions of a given word.
 
 ## Word Antonyms
-./dict.js ant 'word'
+- `./dict.js ant 'word'`<br/>
 Display definitions of a given word.
 
 ## Word Examples
-./dict.js ex 'word'
+- `./dict.js ex 'word'`<br/>
 Display definitions of a given word.
 
 ## Word Full Dict
-./dict.js 'word'
+- `./dict.js 'word'`<br/>
 Display definitions of a given word.
 
 ## Word of the Day Full Dict
-./dict.js
+- `./dict.js`<br/>
 Display definitions of a given word.
 
 ## Word Game
-./dict.js play
+- `./dict.js play`<br/>
 Display definitions of a given word.
 
 ## Steps
