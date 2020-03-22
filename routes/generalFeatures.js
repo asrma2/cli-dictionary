@@ -6,7 +6,7 @@ async function generalFeatures(func, word) {
             {
                 if (word && typeof word == 'string') {
                     console.log('\nGetting "Definitions" of the word: "%s" \n', word);
-                    api.getDefinition(word);
+                    api.getDefinition(word, 1);
                 } else {
                     console.log('Please enter a valid word.');
                 }
@@ -16,7 +16,7 @@ async function generalFeatures(func, word) {
             {
                 if (word && typeof word == 'string') {
                     console.log('\nGetting "Synonyms" of the word: "%s" \n', word);
-                    api.getSynonym(word);
+                    api.getSynonym(word, 1);
                 } else {
                     console.log('Please enter a valid word.');
                 }
@@ -26,7 +26,7 @@ async function generalFeatures(func, word) {
             {
                 if (word && typeof word == 'string') {
                     console.log('\nGetting "Antonyms" of the word: "%s" \n', word);
-                    api.getAntonym(word);
+                    api.getAntonym(word, 1);
                 } else {
                     console.log('Please enter a valid word.');
                 }
@@ -36,7 +36,7 @@ async function generalFeatures(func, word) {
             {
                 if (word && typeof word == 'string') {
                     console.log('\nGetting "Examples" of the word: "%s" \n', word);
-                    api.getExample(word);
+                    api.getExample(word, 1);
                 } else {
                     console.log('Please enter a valid word.');
                 }
@@ -50,11 +50,11 @@ async function generalFeatures(func, word) {
             }
         case "full":
             {
-                var result = await api.getDefinition(word);
-                if(result == 'OK') {
-                    await api.getExample(word);
-                    await api.getSynonym(word);
-                    await api.getAntonym(word);
+                var result = await api.getDefinition(word, 1);
+                if(result.length > 0) {
+                    await api.getExample(word, 1);
+                    await api.getSynonym(word, 1);
+                    await api.getAntonym(word, 1);
                 }
                 break;
             }
