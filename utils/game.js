@@ -3,7 +3,6 @@ var api = require('../apis/api');
 var getHint = require('./hint');
 
 function play(word, definitions, synonyms, antnoyms) {
-    console.log(word);
     var num = Math.floor(Math.random() * 3);
     if (num == 0) {
         var index = Math.floor(Math.random() * definitions.length);
